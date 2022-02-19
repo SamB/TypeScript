@@ -219,7 +219,7 @@ interface String {
     match(matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): RegExpMatchArray | null;
 
     /**
-     * Replaces first match with string or all matches with RegExp.
+     * Replaces text in a string, using an object that supports replacement within a string.
      * @param searchValue A string or RegExp search value.
      * @param replaceValue A string containing the text to replace for match.
      */
@@ -227,7 +227,7 @@ interface String {
 
     /**
      * Replaces text in a string, using an object that supports replacement within a string.
-     * @param searchValue A object can search for and replace matches within a string.
+     * @param searchValue A object that can search for and replace matches within a string.
      * @param replacer A function that returns the replacement text.
      */
     replace(searchValue: { [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string; }, replacer: (substring: string, ...args: any[]) => string): string;
